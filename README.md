@@ -8,3 +8,19 @@ raw_text = "سلامٌ علیکم!"
 processed_text = pu.standardize4Word2vec(raw_text)
 print(processed_text)
 ```
+This would result in:
+```
+سلام علیکم 
+```
+
+Or just make charachters standard by ```standatdize()```:
+```
+import persianutils as pu
+raw_text = "سلامٌ علیکم!"
+processed_text = pu.standardize(raw_text)
+print(processed_text)
+```
+That would result in:
+```
+سلام علیکم!
+```
