@@ -1,5 +1,5 @@
 # persianutils
-A \[getting wonderfull] package to preprocess your Persian text for Search, Standardizing & NLP processes
+A \[getting] wonderfull package to preprocess your Persian text for Search, Standardizing & NLP processes
 
 
 # Would it help?
