@@ -1,5 +1,6 @@
 # persianutils
-A package to preprocess your Persian text for Word2Vec embedding
+A \[getting wonderfull] package to preprocess your Persian text for Search, Standardizing & NLP processes
+
 
 # Would it help?
 Persian has a lot of duplicate characters with Arabic but with different Unicode code points. This may lead to have different writings of a word, with almost exactly the same showing. In addition to that, contextual forms of a character may also be used in text, which doesn't change the word shape but makes the same trouble mentioned above. Unfortunately, a lot of non-standard Persian keyboards don't obey these rules, which makes the problem more severe.
