@@ -5,17 +5,17 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="persianutils",
-    version="0.0.2",
+    version="1.0.0",
     author="Iman Nazari",
     author_email="imannazari@hotmail.com",
-    description="A package to preprocess your Persian text for Word2Vec embedding",
+    description="Standardize your Persian text: Preprocessing, Embedding, and more!",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ishto7/persianutils",
-    packages=setuptools.find_packages(),
-    classifiers=(
+    classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-    ),
+    ],
+    python_requires='>=3.6',
 )

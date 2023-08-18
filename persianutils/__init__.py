@@ -5,4 +5,4 @@
 
 # __author__ = "Iman Nazari"
 
-from persianutils.processes import standardize,standardize4Word2vec
+from persianutils.processes import standardize, standardize4Word2vec

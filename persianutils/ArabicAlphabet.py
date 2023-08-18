@@ -43,11 +43,11 @@ LAM = '\u0644'
 MEEM = '\u0645'
 NOON = '\u0646'
 HEH = '\u0647'
-WAW =  '\u0648'
-YEH =  '\u064a'
+WAW = '\u0648'
+YEH = '\u064a'
 
 MINI_ALEF = '\u0670'
-ALEF_WASLA  = '\u0671'
+ALEF_WASLA = '\u0671'
 MADDA_ABOVE = '\u0653'
 HAMZA_ABOVE = '\u0654'
 HAMZA_BELOW = '\u0655'
@@ -55,14 +55,13 @@ HAMZA_BELOW = '\u0655'
 # Small Letters
 SMALL_ALEF = "\u0670"
 SMALL_WAW = "\u06E5"
-SMALL_YEH  = "\u06E6"
+SMALL_YEH = "\u06E6"
 
 # Ligatures Lam-Alef
 LAM_ALEF = '\ufefb'
 LAM_ALEF_HAMZA_ABOVE = '\ufef7'
 LAM_ALEF_HAMZA_BELOW = '\ufef9'
 LAM_ALEF_MADDA_ABOVE = '\ufef5'
-
 
 SIMPLE_LAM_ALEF = '\u0644\u0627'
 SIMPLE_LAM_ALEF_HAMZA_ABOVE = '\u0644\u0623'
@@ -251,7 +250,7 @@ STAR = '\u066d'
 FULL_STOP = '\u06d4'
 BYTE_ORDER_MARK = '\ufeff'
 
-#Diacritics
+# Diacritics
 FATHATAN = '\u064b'
 DAMMATAN = '\u064c'
 KASRATAN = '\u064d'
@@ -263,29 +262,29 @@ SUKUN = '\u0652'
 
 # groups
 
-HAMZAT = (  HAMZA,
-            HAMZA_ABOVE_ALEF,
-            HAMZA_BELOW_ALEF,
-            ALEF_MADDA,
-            HAMZA_ABOVE_WAW,
-            HAMZA_ABOVE_YEH,
-            HAMZA_ABOVE,
-            HAMZA_BELOW
-            )
+HAMZAT = (HAMZA,
+          HAMZA_ABOVE_ALEF,
+          HAMZA_BELOW_ALEF,
+          ALEF_MADDA,
+          HAMZA_ABOVE_WAW,
+          HAMZA_ABOVE_YEH,
+          HAMZA_ABOVE,
+          HAMZA_BELOW
+          )
 
 ALEFAT = (
-            ALEF,
-            ALEF_MADDA,
-            HAMZA_BELOW_ALEF,
-            HAMZA_ABOVE_ALEF,
-            ALEF_WASLA,
-            ALEF_MAKSURA,
-            SMALL_ALEF,
-        )
+    ALEF,
+    ALEF_MADDA,
+    HAMZA_BELOW_ALEF,
+    HAMZA_ABOVE_ALEF,
+    ALEF_WASLA,
+    ALEF_MAKSURA,
+    SMALL_ALEF,
+)
 
-WEAK = (ALEF,  WAW,  YEH,  ALEF_MAKSURA)
+WEAK = (ALEF, WAW, YEH, ALEF_MAKSURA)
 
-YEHLIKE = (YEH,   HAMZA_ABOVE_YEH, ALEF_MAKSURA, SMALL_YEH)
+YEHLIKE = (YEH, HAMZA_ABOVE_YEH, ALEF_MAKSURA, SMALL_YEH)
 
 WAWLIKE = (WAW, HAMZA_ABOVE_WAW, SMALL_WAW)
 
@@ -293,14 +292,13 @@ TEHLIKE = (TEH, TEH_MARBUTA)
 
 SMALL = (SMALL_ALEF, SMALL_WAW, SMALL_YEH)
 
-
 LETTERS = (
-        ALEF,  BEH,  TEH,  TEH_MARBUTA,  THEH,  JEEM,  HAH,  KHAH,
-        DAL, THEL, REH,  ZAIN,  SEEN,  SHEEN,  SAD,  DAD,  TAH,  ZAH,
-        AIN,  GHAIN,  FEH,  QAF,  KAF,  LAM,  MEEM,  NOON,  HEH,  WAW,  YEH,
-        HAMZA,   ALEF_MADDA,  HAMZA_ABOVE_ALEF,  HAMZA_ABOVE_WAW,  HAMZA_BELOW_ALEF,
-        HAMZA_ABOVE_YEH,
-        )
+    ALEF, BEH, TEH, TEH_MARBUTA, THEH, JEEM, HAH, KHAH,
+    DAL, THEL, REH, ZAIN, SEEN, SHEEN, SAD, DAD, TAH, ZAH,
+    AIN, GHAIN, FEH, QAF, KAF, LAM, MEEM, NOON, HEH, WAW, YEH,
+    HAMZA, ALEF_MADDA, HAMZA_ABOVE_ALEF, HAMZA_ABOVE_WAW, HAMZA_BELOW_ALEF,
+    HAMZA_ABOVE_YEH,
+)
 
 TASHKEEL = (FATHATAN, DAMMATAN, KASRATAN,
             FATHA, DAMMA, KASRA,
@@ -308,155 +306,151 @@ TASHKEEL = (FATHATAN, DAMMATAN, KASRATAN,
             )
 
 HARAKAT = (FATHATAN, DAMMATAN, KASRATAN,
-            FATHA, DAMMA, KASRA,
-            SUKUN
-            )
+           FATHA, DAMMA, KASRA,
+           SUKUN
+           )
 
-SHORTHARAKAT = (FATHA,   DAMMA,   KASRA,  SUKUN)
+SHORTHARAKAT = (FATHA, DAMMA, KASRA, SUKUN)
 
 TANWEEN = (FATHATAN, DAMMATAN, KASRATAN)
-
 
 NOT_DEF_HARAKA = KASHEEDA
 
 LIGATURES_LAM_ALEF = (LAM_ALEF, LAM_ALEF_HAMZA_ABOVE, LAM_ALEF_HAMZA_BELOW, LAM_ALEF_MADDA_ABOVE)
 
-
 ALPHABETIC_ORDER = {
-                ALEF: 1,
-                BEH: 2,
-                TEH: 3,
-                TEH_MARBUTA: 3,
-                THEH: 4,
-                JEEM: 5,
-                HAH: 6,
-                KHAH: 7,
-                DAL: 8,
-                THEL: 9,
-                REH: 10,
-                ZAIN: 11,
-                SEEN: 12,
-                SHEEN: 13,
-                SAD: 14,
-                DAD: 15,
-                TAH: 16,
-                ZAH: 17,
-                AIN: 18,
-                GHAIN: 19,
-                FEH: 20,
-                QAF: 21,
-                KAF: 22,
-                LAM: 23,
-                MEEM: 24,
-                NOON: 25,
-                HEH: 26,
-                WAW: 27,
-                YEH: 28,
-                HAMZA: 29,
+    ALEF: 1,
+    BEH: 2,
+    TEH: 3,
+    TEH_MARBUTA: 3,
+    THEH: 4,
+    JEEM: 5,
+    HAH: 6,
+    KHAH: 7,
+    DAL: 8,
+    THEL: 9,
+    REH: 10,
+    ZAIN: 11,
+    SEEN: 12,
+    SHEEN: 13,
+    SAD: 14,
+    DAD: 15,
+    TAH: 16,
+    ZAH: 17,
+    AIN: 18,
+    GHAIN: 19,
+    FEH: 20,
+    QAF: 21,
+    KAF: 22,
+    LAM: 23,
+    MEEM: 24,
+    NOON: 25,
+    HEH: 26,
+    WAW: 27,
+    YEH: 28,
+    HAMZA: 29,
 
-                ALEF_MADDA: 29,
-                HAMZA_ABOVE_ALEF: 29,
-                HAMZA_ABOVE_WAW: 29,
-                HAMZA_BELOW_ALEF: 29,
-                HAMZA_ABOVE_YEH: 29,
-                }
+    ALEF_MADDA: 29,
+    HAMZA_ABOVE_ALEF: 29,
+    HAMZA_ABOVE_WAW: 29,
+    HAMZA_BELOW_ALEF: 29,
+    HAMZA_ABOVE_YEH: 29,
+}
 
 NAMES = {
-                ALEF:  "ألف",
-                BEH: "باء",
-                TEH: 'تاء',
-                TEH_MARBUTA: 'تاء مربوطة',
-                THEH: 'ثاء',
-                JEEM: 'جيم',
-                HAH: 'حاء',
-                KHAH: 'خاء',
-                DAL: 'دال',
-                THEL: 'ذال',
-                REH: 'راء',
-                ZAIN: 'زاي',
-                SEEN: 'سين',
-                SHEEN: 'شين',
-                SAD: 'صاد',
-                DAD: 'ضاد',
-                TAH: 'طاء',
-                ZAH: 'ظاء',
-                AIN: 'عين',
-                GHAIN: 'غين',
-                FEH: 'فاء',
-                QAF: 'قاف',
-                KAF: 'كاف',
-                LAM: 'لام',
-                MEEM: 'ميم',
-                NOON: 'نون',
-                HEH: 'هاء',
-                WAW: 'واو',
-                YEH: 'ياء',
-                HAMZA: 'همزة',
+    ALEF: "ألف",
+    BEH: "باء",
+    TEH: 'تاء',
+    TEH_MARBUTA: 'تاء مربوطة',
+    THEH: 'ثاء',
+    JEEM: 'جيم',
+    HAH: 'حاء',
+    KHAH: 'خاء',
+    DAL: 'دال',
+    THEL: 'ذال',
+    REH: 'راء',
+    ZAIN: 'زاي',
+    SEEN: 'سين',
+    SHEEN: 'شين',
+    SAD: 'صاد',
+    DAD: 'ضاد',
+    TAH: 'طاء',
+    ZAH: 'ظاء',
+    AIN: 'عين',
+    GHAIN: 'غين',
+    FEH: 'فاء',
+    QAF: 'قاف',
+    KAF: 'كاف',
+    LAM: 'لام',
+    MEEM: 'ميم',
+    NOON: 'نون',
+    HEH: 'هاء',
+    WAW: 'واو',
+    YEH: 'ياء',
+    HAMZA: 'همزة',
 
-                KASHEEDA: 'تطويل',
-                ALEF_MADDA: 'ألف ممدودة',
-                ALEF_MAKSURA: 'ألف مقصورة',
-                HAMZA_ABOVE_ALEF: 'همزة على الألف',
-                HAMZA_ABOVE_WAW: 'همزة على الواو',
-                HAMZA_BELOW_ALEF: 'همزة تحت الألف',
-                HAMZA_ABOVE_YEH: 'همزة على الياء',
-                FATHATAN: 'فتحتان',
-                DAMMATAN: 'ضمتان',
-                KASRATAN: 'كسرتان',
-                FATHA: 'فتحة',
-                DAMMA: 'ضمة',
-                KASRA: 'كسرة',
-                SHADDA: 'شدة',
-                SUKUN: 'سكون',
-                }
+    KASHEEDA: 'تطويل',
+    ALEF_MADDA: 'ألف ممدودة',
+    ALEF_MAKSURA: 'ألف مقصورة',
+    HAMZA_ABOVE_ALEF: 'همزة على الألف',
+    HAMZA_ABOVE_WAW: 'همزة على الواو',
+    HAMZA_BELOW_ALEF: 'همزة تحت الألف',
+    HAMZA_ABOVE_YEH: 'همزة على الياء',
+    FATHATAN: 'فتحتان',
+    DAMMATAN: 'ضمتان',
+    KASRATAN: 'كسرتان',
+    FATHA: 'فتحة',
+    DAMMA: 'ضمة',
+    KASRA: 'كسرة',
+    SHADDA: 'شدة',
+    SUKUN: 'سكون',
+}
 
 SHAPED_FORMS = {
-                HAMZA: (HAMZA_ISOLATED),
-                HAMZA_ABOVE_ALEF: (ALEF_HAMZA_ABOVE_ISOLATED, ALEF_HAMZA_ABOVE_FINAL),
-                HAMZA_BELOW_ALEF: (ALEF_HAMZA_BELOW_ISOLATED, ALEF_HAMZA_BELOW_FINAL),
-                HAMZA_ABOVE_YEH: (YEH_HAMZA_ISOLATED, YEH_HAMZA_INITIAL, YEH_HAMZA_MEDIAL, YEH_HAMZA_FINAL),
-                ALEF_MADDA: (ALEF_MADDA_ISOLATED, ALEF_MADDA_FINAL),
-                HAMZA_ABOVE_WAW: (WAW_HAMZA_ISOLATED, WAW_HAMZA_FINAL),
-                ALEF: (ALEF_ISOLATED, ALEF_FINAL),
-                BEH: (BEH_ISOLATED, BEH_FINAL, BEH_INITIAL, BEH_MEDIAL),
-                TEH_MARBUTA: (TEH_MARBUTA_ISOLATED, TEH_MARBUTA_FINAL),
-                TEH: (TEH_ISOLATED, TEH_INITIAL, TEH_MEDIAL, TEH_FINAL),
-                THEH: (THEH_ISOLATED, THEH_INITIAL, THEH_MEDIAL, THEH_FINAL),
-                JEEM: (JEEM_ISOLATED, JEEM_INITIAL, JEEM_MEDIAL, JEEM_FINAL),
-                HAH: (HAH_ISOLATED, HAH_INITIAL, HAH_MEDIAL, HAH_FINAL),
-                KHAH: (KHAH_ISOLATED, KHAH_INITIAL, KHAH_MEDIAL, KHAH_FINAL),
-                DAL: (DAL_ISOLATED, DAL_FINAL),
-                THEL: (THEL_ISOLATED, THEL_FINAL),
-                REH: (REH_ISOLATED, REH_FINAL),
-                ZAIN: (ZAIN_ISOLATED, ZAIN_FINAL),
-                SEEN: (SEEN_ISOLATED, SEEN_INITIAL, SEEN_MEDIAL, SEEN_FINAL),
-                SHEEN: (SHEEN_ISOLATED, SHEEN_INITIAL, SHEEN_MEDIAL, SHEEN_FINAL),
-                SAD: (SAD_ISOLATED, SAD_INITIAL, SAD_MEDIAL, SAD_FINAL),
-                DAD: (DAD_ISOLATED, DAD_INITIAL, DAD_MEDIAL, DAD_FINAL),
-                TAH: (TAH_ISOLATED, TAH_INITIAL, TAH_MEDIAL, TAH_FINAL),
-                ZAH: (ZAH_ISOLATED, ZAH_INITIAL, ZAH_MEDIAL, ZAH_FINAL),
-                AIN: (AIN_ISOLATED, AIN_INITIAL, AIN_MEDIAL, AIN_FINAL),
-                GHAIN: (GHAIN_ISOLATED, GHAIN_INITIAL, GHAIN_MEDIAL, GHAIN_FINAL),
-                FEH: (FEH_ISOLATED, FEH_INITIAL, FEH_MEDIAL, FEH_FINAL),
-                QAF: (QAF_ISOLATED, QAF_INITIAL, QAF_MEDIAL, QAF_FINAL),
-                KAF: (KAF_ISOLATED, KAF_INITIAL, KAF_MEDIAL, KAF_FINAL),
-                LAM: (LAM_ISOLATED, LAM_INITIAL, LAM_MEDIAL, LAM_FINAL),
-                MEEM: (MEEM_ISOLATED, MEEM_INITIAL, MEEM_MEDIAL, MEEM_FINAL),
-                NOON: (NOON_ISOLATED, NOON_INITIAL, NOON_MEDIAL, NOON_FINAL),
-                HEH: (HEH_ISOLATED, HEH_INITIAL, HEH_MEDIAL, HEH_FINAL),
-                WAW: (WAW_ISOLATED, WAW_FINAL),
-                ALEF_MAKSURA: (ALEF_MAKSURA_ISOLATED, ALEF_MAKSURA_FINAL),
-                YEH: (YEH_ISOLATED, YEH_INITIAL, YEH_MEDIAL, YEH_FINAL),
-                LAM_ALEF: (LAM_ALEF_ISOLATED, LAM_ALEF_FINAL),
-                LAM_ALEF_HAMZA_ABOVE: (LAM_ALEF_HAMZA_ABOVE_ISOLATED, LAM_ALEF_HAMZA_ABOVE_FINAL),
-                LAM_ALEF_HAMZA_BELOW: (LAM_ALEF_HAMZA_BELOW_ISOLATED, LAM_ALEF_HAMZA_BELOW_FINAL),
-                LAM_ALEF_MADDA_ABOVE: (LAM_ALEF_MADDA_ABOVE_ISOLATED, LAM_ALEF_MADDA_ABOVE_FINAL)
-                }
-
+    HAMZA: (HAMZA_ISOLATED),
+    HAMZA_ABOVE_ALEF: (ALEF_HAMZA_ABOVE_ISOLATED, ALEF_HAMZA_ABOVE_FINAL),
+    HAMZA_BELOW_ALEF: (ALEF_HAMZA_BELOW_ISOLATED, ALEF_HAMZA_BELOW_FINAL),
+    HAMZA_ABOVE_YEH: (YEH_HAMZA_ISOLATED, YEH_HAMZA_INITIAL, YEH_HAMZA_MEDIAL, YEH_HAMZA_FINAL),
+    ALEF_MADDA: (ALEF_MADDA_ISOLATED, ALEF_MADDA_FINAL),
+    HAMZA_ABOVE_WAW: (WAW_HAMZA_ISOLATED, WAW_HAMZA_FINAL),
+    ALEF: (ALEF_ISOLATED, ALEF_FINAL),
+    BEH: (BEH_ISOLATED, BEH_FINAL, BEH_INITIAL, BEH_MEDIAL),
+    TEH_MARBUTA: (TEH_MARBUTA_ISOLATED, TEH_MARBUTA_FINAL),
+    TEH: (TEH_ISOLATED, TEH_INITIAL, TEH_MEDIAL, TEH_FINAL),
+    THEH: (THEH_ISOLATED, THEH_INITIAL, THEH_MEDIAL, THEH_FINAL),
+    JEEM: (JEEM_ISOLATED, JEEM_INITIAL, JEEM_MEDIAL, JEEM_FINAL),
+    HAH: (HAH_ISOLATED, HAH_INITIAL, HAH_MEDIAL, HAH_FINAL),
+    KHAH: (KHAH_ISOLATED, KHAH_INITIAL, KHAH_MEDIAL, KHAH_FINAL),
+    DAL: (DAL_ISOLATED, DAL_FINAL),
+    THEL: (THEL_ISOLATED, THEL_FINAL),
+    REH: (REH_ISOLATED, REH_FINAL),
+    ZAIN: (ZAIN_ISOLATED, ZAIN_FINAL),
+    SEEN: (SEEN_ISOLATED, SEEN_INITIAL, SEEN_MEDIAL, SEEN_FINAL),
+    SHEEN: (SHEEN_ISOLATED, SHEEN_INITIAL, SHEEN_MEDIAL, SHEEN_FINAL),
+    SAD: (SAD_ISOLATED, SAD_INITIAL, SAD_MEDIAL, SAD_FINAL),
+    DAD: (DAD_ISOLATED, DAD_INITIAL, DAD_MEDIAL, DAD_FINAL),
+    TAH: (TAH_ISOLATED, TAH_INITIAL, TAH_MEDIAL, TAH_FINAL),
+    ZAH: (ZAH_ISOLATED, ZAH_INITIAL, ZAH_MEDIAL, ZAH_FINAL),
+    AIN: (AIN_ISOLATED, AIN_INITIAL, AIN_MEDIAL, AIN_FINAL),
+    GHAIN: (GHAIN_ISOLATED, GHAIN_INITIAL, GHAIN_MEDIAL, GHAIN_FINAL),
+    FEH: (FEH_ISOLATED, FEH_INITIAL, FEH_MEDIAL, FEH_FINAL),
+    QAF: (QAF_ISOLATED, QAF_INITIAL, QAF_MEDIAL, QAF_FINAL),
+    KAF: (KAF_ISOLATED, KAF_INITIAL, KAF_MEDIAL, KAF_FINAL),
+    LAM: (LAM_ISOLATED, LAM_INITIAL, LAM_MEDIAL, LAM_FINAL),
+    MEEM: (MEEM_ISOLATED, MEEM_INITIAL, MEEM_MEDIAL, MEEM_FINAL),
+    NOON: (NOON_ISOLATED, NOON_INITIAL, NOON_MEDIAL, NOON_FINAL),
+    HEH: (HEH_ISOLATED, HEH_INITIAL, HEH_MEDIAL, HEH_FINAL),
+    WAW: (WAW_ISOLATED, WAW_FINAL),
+    ALEF_MAKSURA: (ALEF_MAKSURA_ISOLATED, ALEF_MAKSURA_FINAL),
+    YEH: (YEH_ISOLATED, YEH_INITIAL, YEH_MEDIAL, YEH_FINAL),
+    LAM_ALEF: (LAM_ALEF_ISOLATED, LAM_ALEF_FINAL),
+    LAM_ALEF_HAMZA_ABOVE: (LAM_ALEF_HAMZA_ABOVE_ISOLATED, LAM_ALEF_HAMZA_ABOVE_FINAL),
+    LAM_ALEF_HAMZA_BELOW: (LAM_ALEF_HAMZA_BELOW_ISOLATED, LAM_ALEF_HAMZA_BELOW_FINAL),
+    LAM_ALEF_MADDA_ABOVE: (LAM_ALEF_MADDA_ABOVE_ISOLATED, LAM_ALEF_MADDA_ABOVE_FINAL)
+}
 
 PUNCTUATION_MARKS = [COMMA, SEMICOLON, QUESTION]
 
-
-WESTERN_ARABIC_NUMERALS = ['0','1','2','3','4','5','6','7','8','9']
+WESTERN_ARABIC_NUMERALS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 EASTERN_ARABIC_NUMERALS = ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹']
