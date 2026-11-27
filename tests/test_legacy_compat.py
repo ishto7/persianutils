@@ -1,4 +1,4 @@
-"""The 1.x API must keep behaving like the published persianutils 1.0.0.
+"""The 1.0 API must keep behaving like the published persianutils 1.0.0.
 
 ``fixtures/v1_0_0_reference.json`` was captured from the 1.0.0 wheel on PyPI
 (see ``fixtures/make_v1_reference.py``). Every difference from it is listed

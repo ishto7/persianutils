@@ -221,7 +221,7 @@ The test suite compares both functions with the published 1.0.0 on every Unicode
 random text. They return the same output, 3 to 7 times faster, except for characters 1.0.0
 mishandled because of typos in its tables:
 
-| Input | 1.0.0 | 1.1.0 |
+| Input | 1.0.0 | 2.0.0 |
 | --- | --- | --- |
 | `ﻐ` (U+FED0, ghain medial form) | `ل` | `غ` |
 | `ﻠ` (U+FEE0, lam medial form) | unchanged | `ل` |
