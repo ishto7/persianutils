@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## 2.0.0 - Unreleased
+## 2.0.0 - 2026-11-27
 
 The major version marks the new Python requirement and the size of the release. Code written for
 1.0 keeps working: see Fixed for the only output differences.
