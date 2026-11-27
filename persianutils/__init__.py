@@ -5,9 +5,12 @@
 'این کتاب\\u200cها را ۳ بار خوانده\\u200cام.'
 >>> pu.number_to_words(1404)
 'هزار و چهارصد و چهار'
+>>> pu.to_jalali(2025, 3, 21)
+JalaliDate(1404, 1, 1)
 """
 
 from persianutils.digits import to_arabic_digits, to_english_digits, to_persian_digits
+from persianutils.jalali import JalaliDate, to_gregorian, to_jalali
 from persianutils.normalizer import (
     fix_spacing,
     fix_zwnj,
@@ -22,6 +25,7 @@ from persianutils.processes import standardize, standardize4Word2vec
 __version__ = "1.1.0"
 
 __all__ = [
+    "JalaliDate",
     "__version__",
     "fix_spacing",
     "fix_zwnj",
@@ -35,6 +39,8 @@ __all__ = [
     "standardize4Word2vec",
     "to_arabic_digits",
     "to_english_digits",
+    "to_gregorian",
+    "to_jalali",
     "to_persian_digits",
     "unify_characters",
     "words_to_number",
