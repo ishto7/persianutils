@@ -3,6 +3,8 @@
 >>> import persianutils as pu
 >>> pu.normalize("ﺍﻳﻦ ﻛﺘﺎﺏ ﻫﺎ  را ٣ بار خوانده ام .")
 'این کتاب\\u200cها را ۳ بار خوانده\\u200cام.'
+>>> pu.number_to_words(1404)
+'هزار و چهارصد و چهار'
 """
 
 from persianutils.digits import to_arabic_digits, to_english_digits, to_persian_digits
@@ -14,6 +16,7 @@ from persianutils.normalizer import (
     remove_kashida,
     unify_characters,
 )
+from persianutils.numbers import format_number, number_to_ordinal, number_to_words, words_to_number
 from persianutils.processes import standardize, standardize4Word2vec
 
 __version__ = "1.1.0"
@@ -22,7 +25,10 @@ __all__ = [
     "__version__",
     "fix_spacing",
     "fix_zwnj",
+    "format_number",
     "normalize",
+    "number_to_ordinal",
+    "number_to_words",
     "remove_diacritics",
     "remove_kashida",
     "standardize",
@@ -31,4 +37,5 @@ __all__ = [
     "to_english_digits",
     "to_persian_digits",
     "unify_characters",
+    "words_to_number",
 ]
