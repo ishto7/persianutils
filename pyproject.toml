@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persianutils"
+dynamic = ["version"]
+description = "Persian (Farsi) text toolkit: normalization, half-space (ZWNJ) fixes, digits, numbers in words, Jalali dates and more."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Iman Nazari", email = "imannazari@hotmail.com" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = [
+    "persian",
+    "farsi",
+    "nlp",
+    "normalization",
+    "zwnj",
+    "jalali",
+    "shamsi",
+    "num2words",
+    "text-processing",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: Persian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/ishto7/persianutils"
+Changelog = "https://github.com/ishto7/persianutils/blob/master/CHANGELOG.md"
+Issues = "https://github.com/ishto7/persianutils/issues"
+
+[dependency-groups]
+test = ["pytest>=8", "jdatetime>=5"]
+lint = ["ruff>=0.14", "mypy>=1.18"]
+dev = [{ include-group = "test" }, { include-group = "lint" }]
+
+[tool.setuptools]
+packages = ["persianutils"]
+
+[tool.setuptools.package-data]
+persianutils = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "persianutils.__version__" }
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests", "persianutils", "README.md"]
+addopts = ["-ra", "--strict-markers", "--doctest-modules", "--doctest-glob=*.md"]
+xfail_strict = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF", "PT"]
+ignore = [
+    # Persian text is full of characters that look like Latin punctuation
+    # (for example "،" and "٫"); flagging them is noise in this project.
+    "RUF001",
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# The 1.0 modules keep their historical public names and star import.
+"persianutils/ArabicAlphabet.py" = ["E501"]
+"persianutils/processes.py" = ["F403", "F405"]
+
+[tool.mypy]
+files = ["persianutils", "tests"]
+python_version = "3.9"
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["jdatetime", "jdatetime.*"]
+ignore_missing_imports = true
