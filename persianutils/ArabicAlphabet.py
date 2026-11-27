@@ -204,7 +204,7 @@ KAF_ISOLATED = '\ufed9'
 KAF_FINAL = '\ufeda'
 
 LAM_INITIAL = '\ufedf'
-LAM_MEDIAL = '\ufed0'
+LAM_MEDIAL = '\ufee0'  # 1.0.0 had '\ufed0', which is GHAIN_MEDIAL
 LAM_ISOLATED = '\ufedd'
 LAM_FINAL = '\ufede'
 
@@ -453,4 +453,7 @@ PUNCTUATION_MARKS = [COMMA, SEMICOLON, QUESTION]
 
 WESTERN_ARABIC_NUMERALS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-EASTERN_ARABIC_NUMERALS = ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹']
+# Arabic-Indic digits U+0660-U+0669. 1.0.0 listed Persian digits here except
+# for 4 and 6, so most Arabic-Indic digits were never converted.
+EASTERN_ARABIC_NUMERALS = ['\u0660', '\u0661', '\u0662', '\u0663', '\u0664',
+                           '\u0665', '\u0666', '\u0667', '\u0668', '\u0669']

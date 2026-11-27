@@ -1,0 +1,2 @@
+include CHANGELOG.md CONTRIBUTING.md
+recursive-include tests *.py *.json

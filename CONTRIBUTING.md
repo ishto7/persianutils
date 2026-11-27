@@ -1,54 +1,55 @@
 # Contributing to PersianUtils
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+Bug reports, ideas and pull requests are welcome.
 
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
-- Becoming a maintainer
+## Reporting bugs
 
-## We Develop with Github
+Open an [issue](https://github.com/ishto7/persianutils/issues) with the input, the output you got
+and the output you expected. Paste text as `print(ascii(text))` so invisible characters such as the
+half-space (U+200C) survive the copy.
 
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
+## Development setup
 
-## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
+With [uv](https://docs.astral.sh/uv/):
 
-Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
+```bash
+uv run --group test pytest
+```
 
-1. Fork the repo and create your branch from `master`.
-2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. Issue that pull request!
+```bash
+uv run --group lint ruff check .
+```
 
-## Any contributions you make will be under the MIT Software License
+```bash
+uv run --group lint ruff format .
+```
 
-In short, when you submit code changes, your submissions are understood to be under the
-same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the
-maintainers if that's a concern.
+```bash
+uv run --group dev mypy
+```
 
-## Report bugs using Github's [issues](https://github.com/ishto7/persianutils/issues)
+Without uv, install the package and the development tools into a virtual environment with
+`python -m pip install -e . --group dev` (pip 25.1 or later), then run `pytest`, `ruff` and `mypy`
+directly.
 
-We use GitHub issues to track public bugs. Report a bug
-by [opening a new issue](https://github.com/ishto7/persianutils/issues/new); it's that easy!
+`pytest` also runs the examples in `README.md` and in the docstrings.
 
-## Write bug reports with detail, background, and sample code
+## Pull requests
 
-Here's [an example](http://stackoverflow.com/q/12488905/180626) of a bug report.
+1. Branch from `master`.
+2. Add tests. For a normalization rule, also test inputs the rule must leave alone.
+3. Keep the output of `standardize()` and `standardize4Word2vec()` unchanged.
+   `tests/test_legacy_compat.py` compares them with the published 1.0.0; a deliberate fix must
+   list the affected characters there and in `CHANGELOG.md`.
+4. Update `README.md` and `CHANGELOG.md` for changes users will notice.
+5. Write invisible characters in code as escapes (`"‌"`), not as literal characters.
 
-## Use a Consistent Coding Style
+## Releasing
 
-* 2 spaces for indentation rather than tabs
-* You can try running `npm run lint` for style unification
+1. Set `__version__` in `persianutils/__init__.py` and date the release in `CHANGELOG.md`.
+2. Publish a GitHub release. The "Publish to PyPI" workflow builds the package and uploads it with
+   the `PYPI_API_TOKEN` repository secret.
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its MIT License.
-
-## References
-
-This document was adapted from the open-source contribution guidelines
-for [Facebook's Draft](https://github.com/facebook/draft-js)
-
+By contributing, you agree that your contributions are licensed under the [MIT License](LICENSE).
