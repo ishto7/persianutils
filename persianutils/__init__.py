@@ -21,20 +21,35 @@ from persianutils.normalizer import (
 )
 from persianutils.numbers import format_number, number_to_ordinal, number_to_words, words_to_number
 from persianutils.processes import standardize, standardize4Word2vec
+from persianutils.stopwords import STOPWORDS
+from persianutils.text import (
+    has_persian,
+    is_persian,
+    sentence_tokenize,
+    slugify,
+    sort_key,
+    word_tokenize,
+)
 
 __version__ = "1.1.0"
 
 __all__ = [
+    "STOPWORDS",
     "JalaliDate",
     "__version__",
     "fix_spacing",
     "fix_zwnj",
     "format_number",
+    "has_persian",
+    "is_persian",
     "normalize",
     "number_to_ordinal",
     "number_to_words",
     "remove_diacritics",
     "remove_kashida",
+    "sentence_tokenize",
+    "slugify",
+    "sort_key",
     "standardize",
     "standardize4Word2vec",
     "to_arabic_digits",
@@ -43,5 +58,6 @@ __all__ = [
     "to_jalali",
     "to_persian_digits",
     "unify_characters",
+    "word_tokenize",
     "words_to_number",
 ]
