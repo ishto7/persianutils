@@ -82,7 +82,11 @@ def test_standardize4word2vec_matches_1_0_0_on_every_code_point() -> None:
 
 def test_random_text_matches_1_0_0_algorithm() -> None:
     rng = random.Random(1403)
-    alphabet = list(WORD2VEC_TABLE.keys() - {" +"}) + list(" ++  ") + list("سلام علیکم کتاب‌ها abc")
+    alphabet = [
+        *(WORD2VEC_TABLE.keys() - {" +"}),
+        *" ++  ",
+        *"سلام علیکم کتاب\u200cها abc",
+    ]
     for _ in range(3000):
         text = "".join(rng.choice(alphabet) for _ in range(rng.randrange(40)))
         assert pu.standardize(text) == reference_algorithm(text, STANDARDIZE_TABLE)
@@ -93,7 +97,7 @@ def test_random_text_matches_1_0_0_algorithm() -> None:
     ("text", "standardized", "for_word2vec"),
     [
         # The examples from the 1.0.0 README.
-        ("سلامٌ علیکم!", "سلام علیکم!", "سلام علیکم "),
+        ("سلام\u064c علیکم!", "سلام علیکم!", "سلام علیکم "),
         ("2", "۲", " دو "),
         # Documented 1.0 behaviour that stays as it was.
         ("۳٫۱۴", "۳۱۴", " سه  یک  چهار "),

@@ -88,6 +88,8 @@ ignore = [
 # The 1.0 modules keep their historical public names and star import.
 "persianutils/ArabicAlphabet.py" = ["E501"]
 "persianutils/processes.py" = ["F403", "F405"]
+# Parametrized negative tests check many inputs against one exception type.
+"tests/*" = ["PT011", "PT018"]
 
 [tool.mypy]
 files = ["persianutils", "tests"]
